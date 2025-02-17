@@ -1,0 +1,13 @@
+{
+  "name": "@discharge/utils",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "packageManager": "pnpm@10.4.1",
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.5"
+  }
+}
