@@ -1,6 +1,7 @@
 import logoLight from "./logo-light.svg";
 import { Button } from '@discharge/ui';
 import { add } from '@discharge/utils';
+import '@discharge/ui/src/index.css';
 
 export function Welcome() {
   return (
