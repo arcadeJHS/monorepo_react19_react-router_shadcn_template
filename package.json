@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpm --filter default dev",
+    "build": "pnpm --filter default build",
     "test:all": "pnpm -r test"
   },
   "keywords": [],
