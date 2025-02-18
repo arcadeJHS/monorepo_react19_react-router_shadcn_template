@@ -5,6 +5,17 @@
 - Shadcn
 
 
+## Shadcn + Tailwind v4 + React 19
+https://github.com/shadcn-ui/ui/issues/6585
+https://v4.shadcn.com/
+https://github.com/shadcn-ui/ui/tree/main/apps/v4
+https://github.com/shadcn-ui/ui/tree/main/apps/v4/registry/new-york-v4/ui
+
+https://tailwindcss.com/
+https://tailwindcss.com/docs/installation/using-vite
+
+
+
 ## Add Shadcn components and blocks
 
 > Use the "canary" version!!!
