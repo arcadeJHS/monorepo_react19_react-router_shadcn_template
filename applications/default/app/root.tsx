@@ -6,8 +6,10 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-
 import type { Route } from "./+types/root";
+import { ThemeProvider } from '@discharge/ui';
+import { ThemeSwitcher } from '@discharge/ui';
+
 // import "@ui/index.css";
 // import "@discharge/ui/src/index.css";
 import "./index.css";
@@ -27,24 +29,40 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="theme-pink">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
-      </body>
-    </html>
+    <ThemeProvider.ThemeProvider 
+      availableThemes={[
+        'theme-default', 
+        'theme-pink', 
+        'theme-dark'
+      ]} 
+      defaultTheme={'theme-pink'}
+    >
+      <html lang="en" className="theme-pink">
+        <head>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <Meta />
+          <Links />
+        </head>
+        <body>
+
+          <div className="flex justify-end pt-4 pe-4">  
+            <ThemeSwitcher />
+          </div>
+
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+        </body>
+      </html>
+    </ThemeProvider.ThemeProvider>
   );
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <Outlet />
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

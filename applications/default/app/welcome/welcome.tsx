@@ -49,6 +49,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@ui/components/ui/sidebar"
+import { ThemeSwitcher } from '@discharge/ui';
 
 export function Welcome() {
   return (
