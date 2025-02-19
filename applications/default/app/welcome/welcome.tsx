@@ -51,7 +51,7 @@ import {
 } from "@ui/components/ui/sidebar"
 import { ThemeSwitcher } from '@discharge/ui';
 
-export function Welcome() {
+export function Page() {
   return (
     <SidebarProvider>
       <AppSidebar />
