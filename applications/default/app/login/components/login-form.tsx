@@ -1,16 +1,20 @@
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { cn } from "@ui/lib/utils"
+import { Button } from "@ui/components/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+} from "@ui/components/ui/card"
+import { Input } from "@ui/components/ui/input"
+import { Label } from "@ui/components/ui/label"
 
-export function LoginFormNoGoogle({
+const handleClick = () => {
+  alert('Test Click');
+};
+
+export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
@@ -31,7 +35,7 @@ export function LoginFormNoGoogle({
                 <Input
                   id="email"
                   type="email"
-                  placeholder="m@example.com"
+                  placeholder="email@example.com"
                   required
                 />
               </div>
@@ -48,17 +52,17 @@ export function LoginFormNoGoogle({
                 <Input id="password" type="password" required />
               </div>
               <div className="flex flex-col gap-3">
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-full" onClick={handleClick}>
                   Login
                 </Button>
               </div>
             </div>
-            <div className="mt-4 text-center text-sm">
+            {/* <div className="mt-4 text-center text-sm">
               Don&apos;t have an account?{" "}
               <a href="#" className="underline underline-offset-4">
                 Sign up
               </a>
-            </div>
+            </div> */}
           </form>
         </CardContent>
       </Card>

@@ -10,4 +10,22 @@
 
 .theme-pink {
   --sidebar-background: pink;
+
+  --primary: hsl(206, 100%, 29%);
+  --card-foreground: hsl(206, 100%, 29%);
+  --muted-foreground: hsl(210, 5%, 45%);
+
+  --text-2xl: 1.5rem;
+}
+
+@layer base {
+  a {
+    text-decoration: underline dotted;
+    text-underline-offset: 4px;
+    text-decoration-color: #005597;
+    color: #005597;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 14px;
+  }
 }
